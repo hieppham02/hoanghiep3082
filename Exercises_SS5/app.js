@@ -4,6 +4,7 @@
 // }
 // let str = prompt("Enter a string");
 // console.log(startWith(str));
+
 //Bai 2:
 // function findMaxDiff (arr){
 //     if( arr.length === 0){
@@ -34,6 +35,7 @@
 // let n = Number(prompt("Enter number of element "));
 // let a = [1,5,62,-13,3,5];
 // console.log(...first(a,n,length));
+
 //Bai 4:
 // function checkInt (number1,number2){
 //     if (((number1 < 0) && (number2>0)) || ((number2<0) && (number1>0))){
@@ -47,6 +49,7 @@
 // let a = Number(prompt("Enter number a:"));
 // let b = Number(prompt("Enter number b:"));
 // checkInt(a,b);
+
 //Bai 5:
 // function JavaScript (n){
 //     let x = Math.abs(n-13);
@@ -58,6 +61,7 @@
 // }
 // let inputNumber = Number(prompt("Enter a number"));
 // alert(JavaScript(inputNumber));
+
 //Bai 6:
 //O(n^2)
 // function findMaxDiff2( arr){  
