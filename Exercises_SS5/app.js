@@ -22,19 +22,23 @@
 // let a =  [1, -10, 5, 18, -9, 5];
 // console.log(findMaxDiff(a));
 
-//Bai 3:
 // function first (arr,n){
+//     let b = [];
 //     if (n<=0){
 //         return [];
 //     } else if (n>arr.length){
 //         return arr;
 //     }else if (n<=arr.length) {
-//         return arr.splice(0,n);
+//         // return arr.splice(0,n);
+//         for (let i=0; i<n; i++){
+//             b[i] = a[i];
+//         }
 // }
+// console.log(...b);
 // }
 // let n = Number(prompt("Enter number of element "));
 // let a = [1,5,62,-13,3,5];
-// console.log(...first(a,n,length));
+// console.log(first(a,n,length));
 
 //Bai 4:
 // function checkInt (number1,number2){
