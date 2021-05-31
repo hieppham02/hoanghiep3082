@@ -1,79 +1,140 @@
-// //Bai 1:
-// // function bai1 (str,size){
-// //     let res = '';
-// //     for (let i = size; i > 0; i--){
-// //         res += str[i];
-// //     }
-// //     return res;
-// // }
-// // let strInput = prompt("Type something here ");
-// // let n = strInput.length;
-// // console.log(bai1("\n"+strInput,n));
+//Bai 1: Cho 1 chuỗi str_input. Viết chương trình đảo ngược chuỗi và in ra kết quả.
+// function reverse(str) {
+//     let reversed = ""
+//     for (let i = str.length - 1; i >= 0; i--) {
+//       reversed += str[i]
+//     }
+//     console.log(reversed) // olleh
+// } 
+//   let str_input = "programing"
+//   reverse(str_input)
 
-// //Bai 2:
-// // function bai2(str,n) {
-// // 	for (let i = 0; i < n; i ++){
-// //         let firstEle = str[i].split("");
-// //         firstEle[0] = firstEle[0].toUpperCase();
-// //     }
-// // }
-// // let inputStr = 'this is a tree'.split(" ");
-// // let n = inputStr.length;
-// // console.log(bai2("\n"+inputStr,n));
+//Bai 2:Viết 1 chương trình với đầu vào là 1 chuỗi ký tự và in ra chuỗi đó với các ký tự đầu của chữ mỗi chữ được viết hoa. 
+// function uppercase(str) {
+// 	let strArr=str.split(" ");
+// 	for(let i=0;i<strArr.length;i++){
+//         let charArr=strArr[i].split("");
+// 	    charArr[0]=charArr[0].toUpperCase();
+//         strArr[i]=charArr.join("");
+// 	}
+// 	return strArr.join(" ");
+// }
+// let input_str = "this is test"
+// console.log(uppercase(input_str))
 
-// // //Bai 3:
-// // function bai3(arr) {
-// //     let newArr = []
-// //     for (let i = 0; i < arr.length; i++) {
-// //       if (newArr.indexOf(arr[i]) === -1) {
-// //         newArr.push(arr[i])
-// //       }
-// //     }
-// //     return newArr
-// //   }
-// //   console.log(bai3([1, 1, 2, 3, 5, 3, 1, 5, 6, 7, 4]));
-// //Bai 4:
-// function bai4 (arr){
-//     let userInput = prompt("Enter C/R/U/D (Create/Read/Update/Delete");
-//     if (userInput == 'C'){
+//Bai 3: Viết một chương trình xóa các phần tử trùng của một mảng và in ra kết quả.
+// function same (arr){
+//     let tg;
+//     for (let i=0; i<arr.length-1; i++){
+//         for (let j=i+1; j<arr.length; j++){
+//             if (arr[i]===arr[j]){
+//                 arr[i]=arr[j+1];
+//                 arr.length--;
+//                 i--;
+//             }
+//         }
+//     }
+//     // for (let i=0; i<arr.length-1; i++){
+//     //     for (let j=i+1; j<arr.length; j++){
+//     //         if (arr[i]>arr[j]){
+//     //             tg=arr[i];
+//     //             arr[i]=arr[j];
+//     //             arr[j]=tg;
+//     //         }   
+//     //     }
+//     // }
+//     console.log(...arr);
+    
+// }
+// let Arr=prompt("Nhập mảng bất kỳ, các phần tử cách nhau bằng dấu phẩy (,)").split(",");
+// same(Arr);
+
+//Bai 4:
+// function crud (arr,userInput){
+//     console.table(arr);
+//     if (userInput === "r"){
+//         console.table(arr);
+//     } else if (userInput === "c"){
+//         let name = prompt("Tên?");
+//         let age = Number(prompt("Tuổi?"));
+//         let rank = prompt("Chức vụ?")
+//         let salary = Number(prompt("Lương?"));
 //         let add = {
-//             name: prompt("Name?"),
-//             age: Number(prompt("Age?")),
-//             salary: Number(prompt("Salary?")),
-//             rank: prompt("rank?")
+//             name: name,
+//             age: age,
+//             rank: rank,
+//             salary: salary
 //         }
 //         arr.push(add);
-//         console.log(arr);
-//     }
-//     else if (userInput == 'R'){
-//         for (let key in arr){
-//             console.table(arr[key])
+//         console.table(arr)
+//     } else if (userInput === "u"){
+//         //let index = 1;
+//         let index = prompt("Nhập số thứ tự cần sửa thông tin");
+//         index = index - 1;
+//         for (let i = 0; i < arr.length; i++){
+//             if (i === index){
+//                 let t = prompt("Nhập thông tin cần chỉnh sửa (name/age/rank/salary)").toLowerCase();
+//                     if ( t === "name" ){
+//                        arr[i].name = prompt("Ten?");         
+//                     } else if ( t === "age" ){
+//                         arr[i].age = Number(prompt("Tuoi?"));
+//                     }  else if ( t === "rank" ){
+//                         arr[i].age = Number(prompt("Chuc vu?"));
+//                     }  else if ( t === "salary" ){
+//                         arr[i].age = Number(prompt("Luong?"));
+//                     }
+//             }
 //         }
+//         console.table(arr);
+//     } else if (userInput === "d"){
+//         // let pos = 1;
+//         let pos = Number(prompt("Nhap vi tri can xoa"));
+//         pos = pos - 1;
+//         for (let i = 0; i < arr.length; i ++){
+//             if (i === pos){
+//                 arr.splice(i,1);
+//             }
+//         }
+//         console.table(arr);
 //     }
-//     else if (userInput == "U"){
-
-//     }
-    
-
 // }
-// let mindX = [
+// let input = prompt("Nhập thao tác C/R/U/D (Creat/Read/Update/Delete) ").toLowerCase();
+// let staff = [
 //     {
-//         name: 'Hai',
+//         name: "Hai",
+//         age: 21,
+//         rank: "Fresher",
+//         salary: 350
+//     },
+//     {
+//         name: "Ngoc",
 //         age: 24,
-//         salary: 500,
-//         rank: 'fresher'
+//         rank: "Senior",
+//         salary: 1500
 //     },
 //     {
-//         name: 'Duong',
+//         name: "Quoc",
 //         age: 27,
-//         salary: 3000,
-//         rank: 'Senior'
-//     },
-//     {
-//         name: 'Dat',
-//         age: 30,
-//         salary: 5000,
-//         rank: 'CTO'
+//         rank: "Tech lead",
+//         salary: 3500
 //     }
 // ]
-// bai4(mindX);
+// crud(staff,input);
+
+//Bai 5:
+// function namNhuan (year){
+//     if (year % 400 == 0) 
+//         return true; 
+//     if (year % 4 == 0 && year % 100 != 0) 
+//         return true;
+//     return false; 
+// }
+// function dayMonthYear (){
+//     let day = 29;
+//     let month = 2;
+//     let year = 2039 ;
+    
+    
+// }
+// dayMonthYear();
+
